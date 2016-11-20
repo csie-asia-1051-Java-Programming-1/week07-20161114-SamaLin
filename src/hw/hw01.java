@@ -14,9 +14,8 @@ public class hw01 {
 		int x=scn.nextInt();
 		int y=scn.nextInt();
 		int z=scn.nextInt();
-		int max=gcd(gcd(x,y),z);
 		int min=lcm(lcm(x,y),z);
-//		System.out.println(min);
+		System.out.println(min);
 	}
 //	public static int lcm(int x,int y){
 //		// TODO Auto-generated method stub
@@ -33,11 +32,9 @@ public class hw01 {
 	}
 	public static int lcm(int x,int y){
 		// TODO Auto-generated method stub
-		if(x%y==0){
-			return y;
-		}else{
-			return gcd(y,x%y);
-		}
+		int a=gcd(x,y);
+		int an= a*(x/a)*(y/a);
+		return an;
 	}
 
 }
